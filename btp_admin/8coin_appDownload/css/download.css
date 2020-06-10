@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+}
+
+/* download s */
+.download {
+    height: 1rem;
+    background: #333;
+    width: 100%;
+    font-size: .24rem;
+    color: #eee;
+    
+}
+
+.download p:nth-child(1) {
+    float: left;
+    width: 78%;
+    margin-top: .1rem;
+    margin-left: .3rem;
+} 
+
+.download p:nth-child(2) {
+    float: right;
+    width: 16%;
+    margin-top: .1rem;
+}
+
+.download p:nth-child(2) img {
+    width: .6rem;
+    height: .6rem;
+    margin-left: .2rem;
+}
+/* download e */
+
+/* app header s */
+.app_header {
+    background-image: url(../img/background.png);
+    background-size: 100% 100%;
+    text-align: center;
+    height: 5rem;
+    width: 100%;
+}
+
+.app_header .img {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    padding-top: 1.3rem;
+}
+
+.app_header .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.app_header .coinbab {
+    font-size: 0.35rem;
+    color: #333;
+    padding-top: 0.18rem;
+}
+/* app header e */
+
+/* down s */
+.down {
+    /* height: 3rem; */
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.android {
+    background: #7C8EFF;
+    height: .8rem;
+    margin:0 .4rem;
+    border-radius: 5px;
+}
+
+.android img {
+    width: 0.4rem;
+    height: 0.5rem;
+    vertical-align: top;
+    margin-top: .15rem;
+    margin-left: 1.3rem;
+}
+
+.android span {
+    display: inline-block;
+    margin-top: .2rem;
+    vertical-align: top;
+    font-size: 0.3rem;
+    color: white;
+    letter-spacing: 0.03em;
+}
+
+.ios {
+    border: 1px solid #7C8EFF;
+    height: .8rem;
+    margin: 0 .4rem;
+    border-radius: 5px;
+    margin-top: 0.3rem;
+}
+
+.ios img {
+    width: 0.4rem;
+    height: 0.5rem;
+    vertical-align: top;
+    margin-top: .15rem;
+    margin-left: 1.3rem;
+}
+
+.ios span {
+    display: inline-block;
+    font-size: 0.3rem;
+    color: #7C8EFF;
+    margin-top: .2rem;
+    vertical-align: top;
+    letter-spacing: 0.03em;
+}
+/* down e */
+
+/* about s  */
+
+.about {
+    margin: 0 .4rem;
+    font-size: 0.25rem;
+    color: #666;
+    margin-top: 0.45rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+}
+
+/* about e  */

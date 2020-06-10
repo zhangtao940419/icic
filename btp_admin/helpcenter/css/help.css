@@ -1,0 +1,159 @@
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1024px !important;
+    }
+}
+.allege {
+    background: #FEFCEC;
+    color: #E31818;
+    width: 100%;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+.allege-content {
+    padding: 0 0.5rem 0.6rem 0.4rem; 
+}
+
+.title label {
+    margin-left: 5%;
+    font-size: 1rem;
+}
+
+.title-s {
+    height: 0.4rem;
+    width: 100%;
+    background: #eee;
+}
+.mu-input-line {
+    height: 0 !important;
+}
+.mu-input-focus-line {
+    height: 0 !important;
+}
+.mu-text-field-input {
+    text-indent: 5%;
+    border: none;
+}
+.mu-text-field-textarea {
+    text-indent: 5%;
+    border: none;
+}
+
+.z_photo {
+    width: 100%;
+    height: auto;
+    padding: 0.3rem;
+    overflow: auto;
+    clear: both;
+    margin: 1rem auto;
+    /* border: 1px solid #555; */
+}
+
+.z_photo img {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 1rem;
+}
+
+.z_addImg {
+    float: left;
+    margin-right: 0.5rem;
+}
+.z_kua {
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 4%;
+}
+.z_file {
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/phone.png) no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.z_file input::-webkit-file-upload-button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    position: absolute;
+    outline: 0;
+    opacity: 0;
+}
+
+.z_file input#file {
+    display: block;
+    width: auto;
+    border: 0;
+    vertical-align: middle;
+}
+
+/*遮罩层*/
+
+.z_mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+
+.z_alert {
+    width: 14rem;
+    height: 8rem;
+    border-radius: .2rem;
+    background: #fff;
+    font-size: .9rem;
+    text-align: center;
+    margin: 12rem auto;
+    
+}
+
+.z_alert p:nth-child(1) {
+    line-height: 4.5rem;
+    height: 3.5rem;
+}
+
+.z_alert p:nth-child(2) span {
+    display: inline-block;
+    width: 49%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    float: left;
+    border-top: 1px solid #ddd;
+}
+
+.z_cancel {
+    border-right: 1px solid #ddd;
+}
+
+/* 提交 s */
+.submit {
+    height: 9rem;
+    width: 100%;
+    background: #eee;
+    text-align: center;
+}
+.submit button {
+    background: #414AFC;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: white;
+    width: 5rem;
+    border: none;
+    margin-top: 2rem;
+}
+/* 提交 e */

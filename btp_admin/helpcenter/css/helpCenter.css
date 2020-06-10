@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1024px !important;
+    }
+}
+.hotspot {
+    color: #333;
+    background: #eee;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-left: 2rem;
+    font-weight: 600;
+}
+
+.titles {
+    font-size: 1rem;
+}
+
+.contents {
+    font-size: 0.8rem;
+    color: #999 !important;
+}
+.mu-expansion-panel-header {
+    width: 100% !important;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>帮助</title>
+    <link rel="stylesheet" href="./css/help.css">
+    <link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+</head>
+
+<body>
+    <div id="app">
+        <mu-container style="margin: 0;padding: 0;">
+            <mu-tabs :value.sync="active1" inverse color="secondary" text-color="rgba(0, 0, 0, .54)" center>
+                <mu-tab>常见问题</mu-tab>
+                <div style="width: 30%;"></div>
+                <mu-tab>订单申述</mu-tab>
+            </mu-tabs>
+            <div class="demo-text" v-if="active1 === 0" style="border-top: 1px solid #eee;">
+                <mu-expansion-panel :expand="panel === 'panel1'" @change="toggle('panel1')" style="box-shadow: none;">
+                    <div slot="header">1.交易前需注意什么</div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </mu-expansion-panel>
+                <mu-expansion-panel :expand="panel === 'panel2'" @change="toggle('panel2')" style="box-shadow: none;">
+                    <div slot="header">2.交易前需注意什么</div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </mu-expansion-panel>
+            </div>
+            <div class="demo-text" v-if="active1 === 1">
+                <div class="allege">
+                    <p class="allege-content">
+                        申是指交易对方未响应或遇到纠纷，你可以通过申述来解决纠纷，申述期间，数字资产将保留在托管内，知道纠纷解决，申述后，会有专员处理，请耐心等待。
+                    </p>
+                </div>
+                <div class="title">
+                    <label>标题</label>
+                    <mu-text-field v-model="value2" placeholder="请输入标题" style="width: 100%;"></mu-text-field>
+                    <div class="title-s"></div>
+                    <label>内容</label>
+                    <mu-text-field v-model="value10" placeholder="请输入详细内容" multi-line :rows="4" full-width></mu-text-field>
+                    <div class="z_photo">
+                        <div class="z_kua">
+                            <div class="z_file">
+                                <input type="file" name="file" id="file" value="" accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--遮罩层-->
+                    <div class="z_mask">
+                        <!--弹出框-->
+                        <div class="z_alert">
+                            <p>确定要删除这张图片吗？</p>
+                            <p>
+                                <span class="z_cancel">取消</span>
+                                <span class="z_sure">确定</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 提交 s -->
+                <div class="submit">
+                    <mu-button color="primary">提交</mu-button>
+                </div>
+                <!-- 提交 e -->
+            </div>
+        </mu-container>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+    <script type="text/javascript">
+
+        function imgChange(obj1, obj2) {
+            //获取点击的文本框
+            var file = document.getElementById("file");
+            //存放图片的父级元素
+            var imgContainer = document.getElementsByClassName(obj1)[0];
+            //获取的图片文件
+            var fileList = file.files;
+            //文本框的父级元素
+            var input = document.getElementsByClassName(obj2)[0];
+            var imgArr = [];
+            //遍历获取到得图片文件
+            for (var i = 0; i < fileList.length; i++) {
+                var imgUrl = window.URL.createObjectURL(file.files[i]);
+                imgArr.push(imgUrl);
+                var img = document.createElement("img");
+                img.setAttribute("src", imgArr[i]);
+                var imgAdd = document.createElement("div");
+                imgAdd.setAttribute("class", "z_addImg");
+                imgAdd.appendChild(img);
+                imgContainer.appendChild(imgAdd);
+            };
+            imgRemove();
+        };
+
+        function imgRemove() {
+            var imgList = document.getElementsByClassName("z_addImg");
+            var mask = document.getElementsByClassName("z_mask")[0];
+            var cancel = document.getElementsByClassName("z_cancel")[0];
+            var sure = document.getElementsByClassName("z_sure")[0];
+            for (var j = 0; j < imgList.length; j++) {
+                imgList[j].index = j;
+                imgList[j].onclick = function () {
+                    var t = this;
+                    mask.style.display = "block";
+                    cancel.onclick = function () {
+                        mask.style.display = "none";
+                    };
+                    sure.onclick = function () {
+                        mask.style.display = "none";
+                        t.style.display = "none";
+                    };
+
+                }
+            };
+        };
+    </script>
+    <script>
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    panel: '',
+                    active1: 0,
+                    value2: '',
+                    value10: ''
+                };
+            },
+            methods: {
+                toggle(panel) {
+                    this.panel = panel === this.panel ? '' : panel;
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>
